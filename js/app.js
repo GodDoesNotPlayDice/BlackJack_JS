@@ -182,7 +182,6 @@ const newGame = () => {
             bot_cards_total.append(cardElement);
         }
 
-        console.log(bot_cards);
     }
     player_pts = value_first_game(player_cards, player_pts, 'Player');
     bot_pts = value_first_game(bot_cards, bot_pts, 'Bot');
@@ -213,7 +212,6 @@ const newGame = () => {
         show_bots_cards();
     }
 
-    console.log(bot_pts);
     player_pts_total.innerText = player_pts;
     total_cards.innerText = deck.length;
 }
@@ -235,7 +233,6 @@ const bot = (pts) => {
         bot_cards_total.append(cardElement);
         bot_cards.push(card);
         bot_pts += value_card(card, bot_pts); 
-        console.log(bot_pts);
         return pts;
     }
 };
@@ -263,7 +260,6 @@ const stand = (pts) => {
                 bot_cards.push(card);
                 bot_pts += value_card(card, bot_pts);
                 pts = bot_pts;
-                console.log(bot_pts);
             }
         show_bots_cards();
     }
