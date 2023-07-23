@@ -72,7 +72,15 @@ const value_card = (card, player_pts) => {
     let value = parseInt(card);
     if (isNaN(value)) { // Ver el primer caracter de la carta
         card = card.substring(0,1)
-        value = (card === 'A') ? (player_pts <= 10 ? 11 : 1) : 10;
+        if (value === 'A') {
+            if (player_pts + 11 < 21) {
+                value = 11;
+            } else {
+                value = 1;
+            }
+        } else {
+            value = 10;
+        }
     }
     return value;
 };
@@ -213,7 +221,7 @@ const newGame = () => {
 
 // Continuar con el bot.
 const bot = (pts) => {
-    if (pts > 20) {
+    if (pts > 18) {
         if (player_stand === false) {
             return;
         }
@@ -247,10 +255,10 @@ const show_bots_cards = () => {
 }
 
 const stand = (pts) => {
-    if (pts > 20) {
+    if (pts > 19 && pts < 21) {
         show_bots_cards();
     } else {
-        while (pts < 21) {
+        while (pts < 18) {
                 card = pick_a_card(deck);
                 bot_cards.push(card);
                 bot_pts += value_card(card, bot_pts);

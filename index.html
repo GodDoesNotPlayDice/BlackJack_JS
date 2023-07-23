@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Black Jack JS</title>
 </head>
 
 <body class="bg-black p-4">
@@ -25,7 +25,7 @@
             <nav>
                 <div class="mb-4 lg:my-0">
                     <ul class="flex justify-center">
-                        <li class="mx-2"><a href="#"
+                        <li class="mx-2"><a target="_blank" href="https://github.com/GodDoesNotPlayDice/BlackJack_JS"
                                 class="text-gray-50 text-sm lg:text-base underline hover:text-yellow-500">Source
                                 Code</a></li>
                     </ul>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:grid lg:grid-cols-2 lg:gap-6">
+                <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-6">
                     <div class="my-10">
                         <div class="flex justify-between">
                             <p class="text-white text-sm ml-1 mb-4 font-semibold">Player</p>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex lg:justify-between fixed bg-black p-2 bottom-10 lg:sticky">
+            <div class="flex justify-center flex-row-reverse lg:justify-between bg-black p-3 lg:sticky">
                 <div>
                     <button id="new_game"
                         class="lg:mx-3 mx-2 bg-white bg-opacity-10 px-4 py-2 rounded-sm text-white text-sm font-semibold hover:bg-green-600 transition-all hover:transition-all">New
@@ -82,21 +82,21 @@
                 </div>
                 <div class="flex">
                     <button id="to_hit"
-                        class="lg:mx-3 mx-2 bg-white bg-opacity-10 px-4 py-2 rounded-sm text-white text-sm font-semibold hover:bg-blue-600 transition-all hover:transition-all">to
+                        class="lg:mx-3 mx-2 bg-white bg-opacity-10 p-2  rounded-sm text-white text-sm font-semibold hover:bg-blue-600 transition-all hover:transition-all">to
                         hit</button>
                     <button id="to_stand"
-                        class="lg:mx-3 mx-2 bg-white bg-opacity-10 px-4 py-2 rounded-sm text-white text-sm font-semibold hover:bg-red-600 transition-all hover:transition-all">to
+                        class="lg:mx-3 mx-2 bg-white bg-opacity-10 p-2  rounded-sm text-white text-sm font-semibold hover:bg-red-600 transition-all hover:transition-all">to
                         stand</button>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="p-5">
-            <p class="text-white font-semibold">Create by <a target="_blank" class="underline" href="https://github.com/GodDoesNotPlayDice">GodDoesNotPlayDice</a></p>
-            <div class="flex my-4">
-                <p class="text-white md-2 font-semibold">Powered by</p>
-                <div class="flex justify-around">
+        <div class="p-5 mt-10 lg:mt-20">
+            <p class="text-white font-semibold text-sm lg:text-base text-center lg:text-start">Create by <a target="_blank" class="underline" href="https://github.com/GodDoesNotPlayDice">GodDoesNotPlayDice</a></p>
+            <div class="flex flex-col lg:flex-row my-4">
+                <p class="text-white text-center lg:text-start md-2 font-semibold">Powered by</p>
+                <div class="flex justify-center lg:justify-around my-2">
                     <img class="w-5 mx-1" src="https://camo.githubusercontent.com/442c452cb73752bb1914ce03fce2017056d651a2099696b8594ddf5ccc74825e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f6a6176617363726970742f6a6176617363726970742d6f726967696e616c2e737667" alt="js">
                     <img class="w-5 mx-1" src="https://camo.githubusercontent.com/ffbfbce49f3c298d7ed53c77d7a855463ef5e6252bc100fa6f5a10e2c8ccb040/68747470733a2f2f63646e2e73696d706c6569636f6e732e6f72672f7461696c77696e646373732f303642364434" alt="js">
                     <img class="w-28 mx-1" src="https://sweetalert2.github.io/images/SweetAlert2.png" alt="js">
@@ -105,6 +105,7 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
+    <script src="js/draggeable.js"></script>
 </body>
 
 </html>
