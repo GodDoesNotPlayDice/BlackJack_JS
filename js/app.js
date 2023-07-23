@@ -154,7 +154,7 @@ const newGame = () => {
     for (let i = 0; i < 2; i++) {
         card = pick_a_card(deck);
         const cardElement = document.createElement('img');
-        cardElement.setAttribute('src', `/cards/${card}.png`);
+        cardElement.setAttribute('src', `./cards/${card}.png`);
         player_cards.push(card);
         cardElement.classList.add('w-20', 'lg:w-28', 'relative', 'left-28', '-ml-16');
         player_cards_elements.push(cardElement);
@@ -167,7 +167,7 @@ const newGame = () => {
         card = pick_a_card(deck);
         bot_cards.push(card);
         const cardElement = document.createElement('img');
-        cardElement.setAttribute('src', `/back_cards/red_back.png`);
+        cardElement.setAttribute('src', `./back_cards/red_back.png`);
         cardElement.classList.add('w-20', 'lg:w-28', 'relative', 'left-28', '-ml-16');
         bot_cards_elements.push(cardElement);
         for (let card of bot_cards) {
@@ -221,7 +221,7 @@ const bot = (pts) => {
     } else {
         card = pick_a_card(deck);
         const cardElement = document.createElement('img');
-        cardElement.setAttribute('src', `/back_cards/red_back.png`);
+        cardElement.setAttribute('src', `./back_cards/red_back.png`);
         cardElement.classList.add('w-20', 'lg:w-28', 'relative', 'left-28', '-ml-16');
         bot_cards_elements.push(cardElement);
         bot_cards_total.append(cardElement);
@@ -238,7 +238,7 @@ const show_bots_cards = () => {
     }
     for (card of bot_cards) {
         const cardElement = document.createElement('img');
-        cardElement.setAttribute('src', `/cards/${card}.png`);
+        cardElement.setAttribute('src', `./cards/${card}.png`);
         cardElement.classList.add('w-20', 'lg:w-28', 'relative', 'left-28', '-ml-16');
         bot_cards_elements.push(cardElement);
         bot_cards_total.append(cardElement);
@@ -269,7 +269,7 @@ btnNewGame.addEventListener('click', (e) => {
 btnHit.addEventListener('click', (e) => {
     const cardElement = document.createElement('img');
     let card = pick_a_card(deck);
-    cardElement.setAttribute('src', `/cards/${card}.png`);
+    cardElement.setAttribute('src', `./cards/${card}.png`);
     cardElement.classList.add('w-20', 'lg:w-28', 'relative', 'left-28', '-ml-16');
     player_cards_elements.push(cardElement);
     player_pts += value_card(card, player_pts);
