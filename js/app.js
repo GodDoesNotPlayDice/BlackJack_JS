@@ -1,4 +1,5 @@
-/**
+(() => {
+    /**
  * 2C = Two of Clubs (Treboles)
  * 2D = Two of Diamonds (Diamantes)
  * 2H = Two of Hearts (Corazones)
@@ -357,3 +358,5 @@ btnStand.addEventListener('click', (e) => {
     }
 
 })
+
+})()
