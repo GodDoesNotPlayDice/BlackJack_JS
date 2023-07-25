@@ -116,7 +116,7 @@ const newGame = () => {
     for (let i = 0; i < 2; i++) {
         let card = pick_a_card(deck);
         const cardElement = document.createElement('img');
-        cardElement.setAttribute('src', `../cards/${card}.png`);
+        cardElement.setAttribute('src', `./cards/${card}.png`);
         player_cards.push(card);
         cardElement.classList.add('w-20', 'lg:w-28', 'relative', 'left-28', '-ml-16');
         player_cards_elements.push(cardElement);
